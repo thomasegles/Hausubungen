@@ -15,9 +15,9 @@ public class NumberTestMain {
         NumberTester nbt = new NumberTester("Tests.txt");
         nbt.setOddEvenTester((number) -> {
             if (number % 2 == 0) {
-                return true;
+                return false;
             }
-            return false;
+            return true;
         });
         nbt.setPrimeTester((number) -> {
             for (int i = 2; i <= number / 2; ++i) {
@@ -25,6 +25,10 @@ public class NumberTestMain {
                     return false;
                 }
             }
+            return true;
+        });
+        nbt.setPalindromeTester((number) -> {
+            String strNum = number + "";
             return true;
         });
     }
