@@ -28,12 +28,16 @@ public class NumberTestMain {
             return true;
         });
         nbt.setPalindromeTester((number) -> {
-            String strNum = number + "";
-            String strNumRev = Integer.reverse(number) + "";
-            if (strNum.compareTo(strNumRev) == 1) {
+            String[] numStr = (number + "").split("");
+            String reverse = "";
+            for (int i = numStr.length - 1; i >= 0; i--) {
+                reverse = reverse + numStr[i];
+            }
+            if (Integer.parseInt(reverse) == number) {
                 return true;
             }
             return false;
         });
+        nbt.testFile();
     }
 }

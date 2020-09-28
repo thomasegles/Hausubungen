@@ -16,19 +16,14 @@ import java.util.function.Consumer;
 public class HalloJavamitForEach {
 
     static List<String> strLis = new ArrayList();
-
-    public static void main(String[] args) {
-        strLis.add("Java");
-        strLis.add("C#");
-        strLis.add("C++");
-        System.out.println("For Each Schleife:");
-        for (String s : strLis) {
-            System.out.println(s);
-        }
-        System.out.println("For Each List:");
-        Consumer<String> consumer = (p) -> System.out.println(p);
-        strLis.forEach(consumer);
-        //kürzer wäre strLis.forEach(System.out::print);
+    /**
+     * public static void main(String[] args) { strLis.add("Java");
+     * strLis.add("C#"); strLis.add("C++"); System.out.println("For Each
+     * Schleife:"); for (String s : strLis) { System.out.println(s); }
+     * System.out.println("For Each List:"); Consumer<String> consumer = (p) ->
+     * System.out.println(p); strLis.forEach(consumer); //kürzer wäre
+     * strLis.forEach(System.out::print);
     }
+     */
 
 }
