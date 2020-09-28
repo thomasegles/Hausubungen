@@ -41,6 +41,17 @@ public class NumberTester {
     }
 
     public void testFile() {
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(fileName));
+            int caseAmount = Integer.parseInt(br.readLine());
+            switch (Integer.parseInt(br.readLine())) {
+                case 1:
+            }
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(NumberTester.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(NumberTester.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
 }
