@@ -29,7 +29,11 @@ public class NumberTestMain {
         });
         nbt.setPalindromeTester((number) -> {
             String strNum = number + "";
-            return true;
+            String strNumRev = Integer.reverse(number) + "";
+            if (strNum.compareTo(strNumRev) == 1) {
+                return true;
+            }
+            return false;
         });
     }
 }

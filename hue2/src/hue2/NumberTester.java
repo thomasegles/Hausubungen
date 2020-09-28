@@ -44,8 +44,35 @@ public class NumberTester {
         try {
             BufferedReader br = new BufferedReader(new FileReader(fileName));
             int caseAmount = Integer.parseInt(br.readLine());
-            switch (Integer.parseInt(br.readLine())) {
-                case 1:
+            for (int i = 0; i < caseAmount; i++) {
+                String[] testLine = br.readLine().split(" ");
+                int testNum = Integer.parseInt(testLine[0]);
+                int numToTest = Integer.parseInt(testLine[1]);
+                switch (testNum) {
+                    case 1:
+                        if (oddTester.testNumber(numToTest)) {
+                            System.out.println("ODD");
+                        } else {
+                            System.out.println("EVEN");
+                        }
+                        break;
+                    case 2:
+                        if (primeTester.testNumber(numToTest)) {
+                            System.out.println("PRIME");
+                        } else {
+                            System.out.println("NO PRIME");
+                        }
+                        break;
+                    case 3:
+                        if (palindromeTester.testNumber(numToTest)) {
+                            System.out.println("PALINDROME");
+                        } else {
+                            System.out.println("NO PALINDROME");
+                        }
+                        break;
+                    default:
+                        break;
+                }
             }
         } catch (FileNotFoundException ex) {
             Logger.getLogger(NumberTester.class.getName()).log(Level.SEVERE, null, ex);
