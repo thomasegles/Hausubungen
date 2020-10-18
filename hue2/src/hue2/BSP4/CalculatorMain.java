@@ -9,7 +9,9 @@ package hue2.BSP4;
  *
  * @author Thomas
  */
-public interface CalculateOperation {
+public class CalculatorMain {
 
-    Number calc(Number x, Number y);
+    public static void main(String[] args) {
+
+    }
 }
